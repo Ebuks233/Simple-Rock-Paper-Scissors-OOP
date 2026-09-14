@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Main{
+    static void main() {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Welcome To rock paper Scissors");
+        System.out.println("Enter your Choice: ");
+        String Choice = input.nextLine();
+        String[]options = {"Rock","Paper","Scissors"};
+        int random_choice = (int)(Math.random()*options.length);
+        Game game = new Game();
+
+        game.user = Choice;
+        game.computer = options[random_choice];
+
+        game.result();
+
+        System.out.print("Do you want to play again[YES/NO]: ");
+        String play = input.nextLine();
+
+        while(play.equalsIgnoreCase("Yes")){
+            System.out.println("Enter your choice: ");
+            Choice = input.nextLine();
+            game.result();
+            System.out.print("Do you want to play again[YES/NO]: ");
+            play = input.nextLine();
+        }
+
+
+
+    }
+}
