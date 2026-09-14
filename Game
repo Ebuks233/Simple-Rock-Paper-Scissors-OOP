@@ -1,0 +1,42 @@
+public class Game {
+    String user;
+    String computer;
+    int[] user_score = {0};
+    int[] computer_score = {0};
+
+    void result() {
+        if (user.equalsIgnoreCase("Rock") && computer.equalsIgnoreCase("Scissors")) {
+            System.out.println("User wins");
+            user_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Scissors") && computer.equalsIgnoreCase("Rock")) {
+            System.out.println("Computer wins");
+            computer_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Paper") && computer.equalsIgnoreCase("Rock")) {
+            System.out.println("User wins");
+            user_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Rock") && computer.equalsIgnoreCase("Paper")) {
+            System.out.println("Computer wins");
+            computer_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Scissors") && computer.equalsIgnoreCase("Paper")) {
+            System.out.println("User wins");
+            user_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Paper") && computer.equalsIgnoreCase("Scissors")) {
+            System.out.println("Computer wins");
+            computer_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else {
+            System.out.println("Wrong Input Try again");
+        }
+    }
+}
