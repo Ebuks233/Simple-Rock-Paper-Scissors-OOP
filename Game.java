@@ -1,31 +1,42 @@
 public class Game {
-    String user_option;
-    String Computer_option;
+    String user;
+    String computer;
+    int[] user_score = {0};
+    int[] computer_score = {0};
 
-    void result(){
-        if(user_option.equalsIgnoreCase("Rock") && Computer_option.equalsIgnoreCase("Paper")){
-            System.out.println("Computer wins You lose");
+    void result() {
+        if (user.equalsIgnoreCase("Rock") && computer.equalsIgnoreCase("Scissors")) {
+            System.out.println("User wins");
+            user_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Scissors") && computer.equalsIgnoreCase("Rock")) {
+            System.out.println("Computer wins");
+            computer_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Paper") && computer.equalsIgnoreCase("Rock")) {
+            System.out.println("User wins");
+            user_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Rock") && computer.equalsIgnoreCase("Paper")) {
+            System.out.println("Computer wins");
+            computer_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Scissors") && computer.equalsIgnoreCase("Paper")) {
+            System.out.println("User wins");
+            user_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else if (user.equalsIgnoreCase("Paper") && computer.equalsIgnoreCase("Scissors")) {
+            System.out.println("Computer wins");
+            computer_score[0] += 1;
+            System.out.println("User Score: " + user_score[0]);
+            System.out.println("Computer Score: " + computer_score[0]);
+        } else {
+            System.out.println("Wrong Input Try again");
         }
-        else if(user_option.equalsIgnoreCase("Paper") && Computer_option.equalsIgnoreCase("Rock")){
-            System.out.println("You win Computer loses");
-        }
-        else if(user_option.equalsIgnoreCase("Scissors") && Computer_option.equalsIgnoreCase("Paper")){
-            System.out.println("you win computer lose");
-        }
-        else if(user_option.equalsIgnoreCase("Paper") && Computer_option.equalsIgnoreCase("Scissors")){
-            System.out.println("You lose Computer wins");
-        }
-        else if(user_option.equalsIgnoreCase("Scissors") && Computer_option.equalsIgnoreCase("Rock")){
-            System.out.println("You lose Computer wins");
-        }
-        else if(user_option.equalsIgnoreCase("Rock") && Computer_option.equalsIgnoreCase("Scissors")){
-            System.out.println("You win Computer loses");
-        }
-        else if(!user_option.equalsIgnoreCase("Rock")  || !user_option.equalsIgnoreCase("Paper") || !user_option.equalsIgnoreCase("Scissors")){
-            System.out.println("Wrong option try again");
-
-        }
-        
     }
-
 }
